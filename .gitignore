@@ -1,0 +1,7 @@
+#dataset
+waste-img-dataset/
+data/
+
+#PyCharm
+.idea/
+__pycache__/
