@@ -2,6 +2,10 @@
 waste-img-dataset/
 data/
 
+#checkpoints
+checkpoints/
+old/
+
 #PyCharm
 .idea/
 __pycache__/
