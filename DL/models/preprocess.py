@@ -1,7 +1,7 @@
 import os
 import shutil
 import argparse
-from image_crop import image_crop
+from DL.models.utils.image_crop import image_crop
 
 
 class Preprocess:

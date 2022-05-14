@@ -1,6 +1,9 @@
 #dataset
-waste-img-dataset/
-data/
+DL/models/data/
+
+#checkpoints
+DL/models/checkpoints/
+DL/models/savings/
 
 #PyCharm
 .idea/
