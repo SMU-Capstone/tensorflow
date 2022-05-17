@@ -8,3 +8,6 @@ DL/models/savings/
 #PyCharm
 .idea/
 __pycache__/
+
+#Flask
+.config.py
