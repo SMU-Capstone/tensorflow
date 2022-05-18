@@ -1,6 +1,9 @@
 #dataset
-waste-img-dataset/
-data/
+DL/models/data/
+
+#checkpoints
+DL/models/checkpoints/
+DL/models/savings/
 
 #checkpoints
 checkpoints/
@@ -9,3 +12,6 @@ old/
 #PyCharm
 .idea/
 __pycache__/
+
+#Flask
+.config.py
