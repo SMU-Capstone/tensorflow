@@ -38,24 +38,21 @@ def index():
 
 
 @app.post('/predict/')
-class Predict:
-    @staticmethod
-    def predict(self):
-        if request.method == 'POST':
-            label = '지원하지 않는 파일 형식입니다.'
-            file = request.files['file']
-            try:
-                input_batch = transform_image(file)
-                start_time = time.time()
-                label = predict(input_batch)
-                end_time = time.time()
-                app.logger.info(end_time - start_time)
-            except UnidentifiedImageError:
-                pass
-            finally:
-                return jsonify({'predicted_label': label})
+def predict(self):
+    label = '지원하지 않는 파일 형식입니다.'
+    file = request.files['file']
+    try:
+        input_batch = transform_image(file)
+        start_time = time.time()
+        label = predict(input_batch)
+        end_time = time.time()
+        app.logger.info(end_time - start_time)
+    except UnidentifiedImageError:
+        pass
+    finally:
+        return jsonify({'predicted_label': label})
 
 
 if __name__ == '__main__':
     model = load_model('./DL/models/savings/trash_model.h5')
-    app.run(host='0.0.0.0', debug=True, port=9999)
+    app.run(host='0.0.0.0', port=9999)
