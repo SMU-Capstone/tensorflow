@@ -9,6 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY')
     DEBUG = False
+    JSON_AS_ASCII = False
 
 
 class DevelopmentConfig(Config):
