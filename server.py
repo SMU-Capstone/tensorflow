@@ -17,7 +17,7 @@ def transform_image(file):
     return input_batch
 
 
-def predict(input_batch):
+def predict_image(input_batch):
     labels = ['가구류', '고철류', '나무', '도기류', '비닐',
               '스티로폼', '유리병', '의류', '자전거', '전자제품',
               '종이류', '캔류', '페트병', '플라스틱류', '형광등']
@@ -38,13 +38,13 @@ def index():
 
 
 @app.post('/predict/')
-def predict(self):
+def predict():
     label = '지원하지 않는 파일 형식입니다.'
     file = request.files['file']
     try:
         input_batch = transform_image(file)
         start_time = time.time()
-        label = predict(input_batch)
+        label = predict_image(input_batch)
         end_time = time.time()
         app.logger.info(end_time - start_time)
     except UnidentifiedImageError:
