@@ -1,7 +1,7 @@
 # 가로쓰레기통 알리미 (Tensorflow)
 - 가로쓰레기통 알리미 앱의 딥러닝 파트 레포입니다.
 - 본 프로젝트는 imagenet으로 훈련된 MobileNetV2 모델을 base model로 사용합니다.
-- 플라스틱, 종이, 병, 캔, 고철, 스티로폼, 비닐 등 15가지 재활용 쓰레기 정보를 예측합니다.
+- 플라스틱(페트병), 일반쓰레기(종이, 비닐), 병, 고철(캔) 4가지 재활용 쓰레기 정보를 예측합니다.
 - 쓰레기 이미지의 분류 예측 결과를 Flask REST API를 이용하여 확인할 수 있습니다.
 
 ## 참가자
@@ -37,13 +37,13 @@ optional arguments:
 ```
 ### 모델 사용 예시
 [model-usage-mobilenetv2.ipynb](model-usage-mobilenetv2.ipynb)
-![prediction](https://user-images.githubusercontent.com/27190811/169643857-3d23c6e2-0d24-400f-a9f8-790f0d8f66c7.png)
+![prediction](https://user-images.githubusercontent.com/27190811/191047009-1df7d88f-b144-491e-95dd-14f0ff4b0afc.png)
 
 ## Deployment
 ### 1. Docker
 [도커 사용법](https://lively-goose-8b9.notion.site/Docker-4dcaf3b93a894fbe9b86efbe9c7d1eee)
 ```commandline
-docker pull yoon36399/trash-image:0.1
+docker pull yoon36399/trash-image:1.0
 ```
 
 ### 2. git clone
