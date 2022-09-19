@@ -18,9 +18,7 @@ def transform_image(file):
 
 
 def predict_image(input_batch):
-    labels = ['가구류', '고철류', '나무', '도기류', '비닐',
-              '스티로폼', '유리병', '의류', '자전거', '전자제품',
-              '종이류', '캔류', '페트병', '플라스틱류', '형광등']
+    labels = ['고철(캔)', '유리병', '일반쓰레기(종이, 비닐)', '플라스틱(페트병)']
     prediction = model.predict(input_batch)
     prediction = np.argmax(prediction)
     prediction_name = labels[prediction]
